@@ -264,7 +264,7 @@ class YFast {
 	public function httpMatchModified() {
 		global $_SERVER;
 		$lastModHeader = $_SERVER["HTTP_IF_MODIFIED_SINCE"];
-		$tLastModHeader = strtotime($lastModified ? $lastModified : time());
+		$tLastModHeader = strtotime($this->lastModified ? $this->lastModified : time());
 		return $this->lastModified < $tLastModHeader ? true : false;
 	}
 	
